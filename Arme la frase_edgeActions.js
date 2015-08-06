@@ -12,13 +12,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'stage'
    (function(symbolName) {
       
-      
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
-         // insert code here
-         $('body').trigger({
-            type: 'send_frase',
-            sym: sym
-         }); 
+         // insert code here         
       });
       //Edge binding end
 
@@ -26,7 +21,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          //aqui va codigo
          $('body').trigger({
             type: 'send_frase',
-            sym: sym
+            sym: sym,
+            evt: e
          }); 
       });
       //Edge binding end
@@ -124,7 +120,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    //Edge symbol: 'opcion_2'
    (function(symbolName) {   
-   
+
    })("opcion_2");
    //Edge symbol end:'opcion_2'
 
@@ -132,7 +128,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    //Edge symbol: 'opcion_3'
    (function(symbolName) {   
-   
+
    })("opcion_3");
    //Edge symbol end:'opcion_3'
 
@@ -140,7 +136,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    //Edge symbol: 'opcion_4'
    (function(symbolName) {   
-   
+
    })("opcion_4");
    //Edge symbol end:'opcion_4'
 
@@ -148,7 +144,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    //Edge symbol: 'opcion_5'
    (function(symbolName) {   
-   
+
    })("opcion_5");
    //Edge symbol end:'opcion_5'
 
@@ -156,7 +152,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    //Edge symbol: 'opcion_7'
    (function(symbolName) {   
-   
+
    })("opcion_7");
    //Edge symbol end:'opcion_7'
 
@@ -164,7 +160,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    //Edge symbol: 'opcion_8'
    (function(symbolName) {   
-   
+
    })("opcion_8");
    //Edge symbol end:'opcion_8'
 
@@ -172,7 +168,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    //Edge symbol: 'opcion_9'
    (function(symbolName) {   
-   
+
    })("opcion_9");
    //Edge symbol end:'opcion_9'
 
@@ -189,24 +185,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'columna_1'
    (function(symbolName) {   
    
-      Symbol.bindElementAction(compId, symbolName, "${opcion_1}", "click", function(sym, e) {
-         // opcion1
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${opcion_2}", "click", function(sym, e) {
-         // opcion2
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${opcion_3}", "click", function(sym, e) {
-         // opcion3
-
-      });
-      //Edge binding end
-
    })("columna_1");
    //Edge symbol end:'columna_1'
 
@@ -215,49 +193,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'columna_2'
    (function(symbolName) {   
    
-      Symbol.bindElementAction(compId, symbolName, "${opcion_5}", "click", function(sym, e) {
-         // opcion5
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${opcion_4}", "click", function(sym, e) {
-         // opcion4
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${opcion_6}", "click", function(sym, e) {
-         // opcion6
-
-      });
-      //Edge binding end
-
    })("columna_2");
    //Edge symbol end:'columna_2'
 
    //=========================================================
    
    //Edge symbol: 'columna_3'
-   (function(symbolName) {   
-   
-      Symbol.bindElementAction(compId, symbolName, "${opcion_7}", "click", function(sym, e) {
-         // opcion7
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${opcion_8}", "click", function(sym, e) {
-         // opcion8
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${opcion_9}", "click", function(sym, e) {
-         // opcion9
-
-      });
-      //Edge binding end
+   (function(symbolName) {         
 
    })("columna_3");
    //Edge symbol end:'columna_3'
@@ -283,6 +225,96 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'recuadro_actividad'
    (function(symbolName) {   
    
+      Symbol.bindElementAction(compId, symbolName, "${opcion_1}", "click", function(sym, e) {
+         // opcion1
+         $('body').trigger({
+            type: 'put_word',
+            sym: sym,
+            evt: e
+         });
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${opcion_2}", "click", function(sym, e) {
+         // opcion2
+         $('body').trigger({
+            type: 'put_word',
+            sym: sym,
+            evt: e
+         });
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${opcion_3}", "click", function(sym, e) {
+         // opcion3
+         $('body').trigger({
+            type: 'put_word',
+            sym: sym,
+            evt: e
+         });
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${opcion_4}", "click", function(sym, e) {
+         // opcion4
+         $('body').trigger({
+            type: 'put_word',
+            sym: sym,
+            evt: e
+         });
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${opcion_5}", "click", function(sym, e) {
+         // opcion5
+         $('body').trigger({
+            type: 'put_word',
+            sym: sym,
+            evt: e
+         });
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${opcion_6}", "click", function(sym, e) {
+         // opcion6
+         $('body').trigger({
+            type: 'put_word',
+            sym: sym,
+            evt: e
+         });
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${opcion_7}", "click", function(sym, e) {
+         // opcion7
+         $('body').trigger({
+            type: 'put_word',
+            sym: sym,
+            evt: e
+         });
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${opcion_8}", "click", function(sym, e) {
+         // opcion8
+         $('body').trigger({
+            type: 'put_word',
+            sym: sym,
+            evt: e
+         });
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${opcion_9}", "click", function(sym, e) {
+         // opcion9
+         $('body').trigger({
+            type: 'put_word',
+            sym: sym,
+            evt: e
+         });
+      });
+      //Edge binding end
+
    })("recuadro_actividad");
    //Edge symbol end:'recuadro_actividad'
 
@@ -299,5 +331,77 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    })("Enviar_activo");
    //Edge symbol end:'Enviar_activo'
+
+   //=========================================================
+   
+   //Edge symbol: 'txt_1'
+   (function(symbolName) {   
+   
+   })("txt_1");
+   //Edge symbol end:'txt_1'
+
+   //=========================================================
+   
+   //Edge symbol: 'txt_2'
+   (function(symbolName) {   
+   
+   })("txt_2");
+   //Edge symbol end:'txt_2'
+
+   //=========================================================
+   
+   //Edge symbol: 'txt_3'
+   (function(symbolName) {   
+   
+   })("txt_3");
+   //Edge symbol end:'txt_3'
+
+   //=========================================================
+   
+   //Edge symbol: 'txt_4'
+   (function(symbolName) {   
+   
+   })("txt_4");
+   //Edge symbol end:'txt_4'
+
+   //=========================================================
+   
+   //Edge symbol: 'txt_5'
+   (function(symbolName) {   
+   
+   })("txt_5");
+   //Edge symbol end:'txt_5'
+
+   //=========================================================
+   
+   //Edge symbol: 'txt_6'
+   (function(symbolName) {   
+   
+   })("txt_6");
+   //Edge symbol end:'txt_6'
+
+   //=========================================================
+   
+   //Edge symbol: 'txt_7'
+   (function(symbolName) {   
+   
+   })("txt_7");
+   //Edge symbol end:'txt_7'
+
+   //=========================================================
+   
+   //Edge symbol: 'txt_8'
+   (function(symbolName) {   
+   
+   })("txt_8");
+   //Edge symbol end:'txt_8'
+
+   //=========================================================
+   
+   //Edge symbol: 'txt_9'
+   (function(symbolName) {   
+   
+   })("txt_9");
+   //Edge symbol end:'txt_9'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-327212");

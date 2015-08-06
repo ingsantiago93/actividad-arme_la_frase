@@ -17,19 +17,31 @@
     }],
     "words": [
     {
-    	"word":"palabra_a"
+    	"word":"La"
     },
     {
-    	"word":"palabra_b"
+    	"word":"el"
     },
     {
-    	"word":"palabra_c"
+    	"word":"los"
     },
     {
-    	"word":"palabra_d"
+    	"word":"casa"
     },
     {
-    	"word":"palabra_x"
+    	"word":"es"
+    },
+    {
+        "word":"perro"
+    },
+    {
+        "word":"bonita"
+    },
+    {
+        "word":"fea"
+    },
+    {
+        "word":"grande"
     }],
 	"feedback":{
         "attempts":{
